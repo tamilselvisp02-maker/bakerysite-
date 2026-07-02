@@ -1269,6 +1269,11 @@ body{
     box-shadow:0 15px 28px rgba(255,77,109,0.2);
 }
 
+.contact-info-card{
+    /* override body centering: details should be left-aligned; heading centered below */
+    text-align: left;
+}
+
 .contact-info-card .info-block{
     margin-bottom:26px;
 }
@@ -1277,10 +1282,37 @@ body{
     margin-bottom:0;
 }
 
+.contact-info-card h3{
+    color:#333;
+    margin-bottom:18px;
+    text-align:center; /* keep heading centered */
+}
+
 .contact-info-card p{
     color:#555;
     line-height:1.8;
     margin:10px 0 0;
+    text-align:left; /* ensure detail text is left aligned */
+}
+
+/* align labels (e.g. "Phone:") in a column so values start at same vertical line */
+.contact-info-card .info-block p strong{
+    display:inline-block;
+    width:140px; /* adjust 120-160px if needed */
+    min-width:110px;
+    font-weight:700;
+    color:#333;
+    margin-right:8px;
+    text-align:left;
+}
+
+@media (max-width: 650px) {
+    .contact-info-card .info-block p strong{
+        display:block;
+        width:auto;
+        margin-right:0;
+        margin-bottom:6px;
+    }
 }
 
 .map-block{
