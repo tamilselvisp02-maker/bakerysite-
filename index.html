@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavanya's Home Bakery</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+        <!-- Navbar -->
+         <!-- Navbar -->
+     <header class="navbar">
+
+    <div class="top-nav">
+        <img src="images/logo.png" class="logo" alt="Lavanya's Home Bakery Logo">
+
+        <div class="right-nav">
+    
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="cake.html">Cakes</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+    </div>
+</header>
+
+
+
+<div class="search-section">
+    <input type="text" id="searchBox" placeholder="🔍 Search cakes, desserts and treats">
+</div>
+
+<main class="page-main">
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span class="page-label">Home Bakery</span>
+            <h1>Beautiful cakes and desserts crafted for your celebration❤️</h1>
+
+            <p>
+                Freshly baked with premium ingredients, custom designs and warm hospitality—made to delight every guest❤️.
+            </p>
+
+            <div class="hero-actions">
+                <button class="explore-btn" onclick="window.location.href='cake.html'">
+                    View Cakes
+                </button>
+                <a class="secondary-btn" href="contact.html">
+                    Order Custom Cake
+                </a>
+            </div>
+
+            <ul class="hero-highlights">
+                <li>Custom designs for birthdays, weddings and anniversaries</li>
+                <li>Made fresh daily with premium ingredients</li>
+                <li>Delivery & pickup across the city</li>
+            </ul>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="images/hero-cake.jpg" alt="Chocolate Cake">
+        </div>
+
+    </section>
+
+    <section class="categories">
+        <div class="categories-header">
+            <h2>Browse our popular categories</h2>
+            <p>Choose from our most-loved cake and dessert collections made for every occasion❤️.</p>
+        </div>
+
+        <div class="cake-categories">
+
+        <div class="category-item" onclick="window.location.href='birthday-cakes.html'">
+            <img src="images/birthday.png" alt="Birthday Cakes">
+            <p>Birthday Cakes</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='chocolate-cakes.html'">
+            <img src="images/chocolate.png" alt="Chocolate Cakes">
+            <p>Chocolate Cakes</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='strawberry-cakes.html'">
+            <img src="images/strawberry-cake.jpg" alt="Strawberry Cakes">
+            <p>Strawberry Cakes</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='cupcakes.html'">
+            <img src="images/cupcake(1).png" alt="Cupcakes">
+            <p>Cupcakes</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='donuts.html'">
+            <img src="images/donuts(1).png" alt="Donuts">
+            <p>Donuts</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='cookies.html'">
+            <img src="images/cookies(1).png" alt="Cookies">
+            <p>Cookies</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='desserts.html'">
+            <img src="images/desserts(1).png" alt="Desserts">
+            <p>Desserts</p>
+        </div>
+        <div class="category-item" onclick="window.location.href='wedding-cakes.html'">
+            <img src="images/wedding.png" alt="Wedding Cakes">
+            <p>Wedding Cakes</p>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="cake-featured home-section">
+        <div class="section-header">
+            <h2>Why choose Lavanya's Home Bakery?</h2>
+            <p>We blend fresh ingredients, thoughtful design and reliable service to create bakery favorites you can trust❤️.</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>Freshly baked daily❤️</h3>
+                <p>Every cake and dessert is prepared fresh with carefully selected ingredients.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Beautiful presentation❤️</h3>
+                <p>Elegant styling, crisp finishes and joyful decorations make every order special.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Custom orders made easy❤️</h3>
+                <p>Simply tell us your theme, flavour and guest count—we'll take care of the rest.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products home-section">
+
+        <div class="section-header">
+            <h2>Our Best Sellers</h2>
+            <p>Choose our most-loved cakes and treats, perfectly styled for celebrations and special moments❤️.</p>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card" data-name="Chocolate Cake" data-image="images/chocolate-cake.jpg" data-description="Rich chocolate sponge layered with silky ganache, finished with berries and a dusting of cocoa." data-price="₹499" data-rating="⭐⭐⭐⭐⭐ (4.9)">
+                <img src="images/chocolate-cake.jpg" alt="Chocolate Cake">
+                <h3>🍫 Chocolate Cake</h3>
+                <p class="rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                <p>₹499</p>
+                <button class="add-cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card" data-name="Vanilla Cake" data-image="images/vanilla-cake.jpg" data-description="Soft vanilla sponge with creamy frosting and a hint of real vanilla bean for a delicate finish." data-price="₹449" data-rating="⭐⭐⭐⭐⭐ (4.9)">
+                <img src="images/vanilla-cake.jpg" alt="Vanilla Cake">
+                <h3>🍦 Vanilla Cake</h3>
+                <p class="rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                <p>₹449</p>
+                <button class="add-cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card" data-name="Strawberry Cake" data-image="images/strawberry-cake.jpg" data-description="Fresh strawberry layers with whipped cream and sweet berry compote, perfect for any celebration." data-price="₹549" data-rating="⭐⭐⭐⭐⭐ (4.9)">
+                <img src="images/strawberry-cake.jpg" alt="Strawberry Cake">
+                <h3>🍓 Strawberry Cake</h3>
+                <p class="rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                <p>₹549</p>
+                <button class="add-cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+
+            <div class="product-card" data-name="Birthday Cake" data-image="images/birthday-cake.jpg" data-description="Celebration cake with festive frosting, colorful sprinkles, and a soft buttery sponge everyone loves." data-price="₹799" data-rating="⭐⭐⭐⭐⭐ (4.9)">
+                <img src="images/birthday-cake.jpg" alt="Birthday Cake">
+                <h3>🎂 Birthday Cake</h3>
+                <p class="rating">⭐⭐⭐⭐⭐ (4.9)</p>
+                <p>₹799</p>
+                <button class="add-cart-btn">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="images/logo.png" class="logo" alt="Lavanya's Home Bakery Logo">
+            <p>Lavanya's Home Bakery creates premium cakes and desserts for every celebration using fresh ingredients and careful craftsmanship❤️.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link facebook" aria-label="Facebook">f</a>
+                <a href="#" class="social-link instagram" aria-label="Instagram">📸</a>
+                <a href="#" class="social-link whatsapp" aria-label="WhatsApp">💬</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cake.html">Cakes</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><strong>Phone:</strong> +91 63815 70958</p>
+            <p><strong>Email:</strong> lahsivaynaval@gmail.com</p>
+            <p><strong>Address:</strong> 2811 bakery street,krishnagiri,Tamil Nadu</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Lavanya's Home Bakery. All rights reserved.</p>
+    </div>
+</footer>
+
+        <script src="script.js"></script>
+
+</body>
+</html>

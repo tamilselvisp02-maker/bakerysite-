@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Details | Lavanya's Home Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+        <!-- Navbar -->
+     <header class="navbar">
+
+    <div class="top-nav">
+        <img src="images/logo.png" class="logo" alt="Lavanya's Home Bakery Logo">
+
+        <div class="right-nav">
+    
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="cake.html">Cakes</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <button class="order-btn">
+                Order Now
+            </button>
+        </div>
+    </div>
+</header>
+
+
+    <section class="cake-detail-page">
+        <div class="cake-detail-card">
+            <div class="cake-detail-image">
+                <img id="cakeImage" src="" alt="Cake">
+            </div>
+            <div class="cake-detail-content">
+                <h1 id="cakeName">Cake Name</h1>
+                <p class="rating" id="cakeRating">⭐⭐⭐⭐⭐</p>
+                <p class="price" id="cakePrice">₹0</p>
+                <p id="cakeDescription">Cake description goes here.</p>
+                <button class="add-cart-btn" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+        </section>
+
+        <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="images/logo.png" class="logo" alt="Lavanya's Home Bakery Logo">
+            <p>Lavanya's Home Bakery creates premium cakes and desserts for every celebration using fresh ingredients and careful craftsmanship❤️.</p>
+            <div class="footer-social">
+                <a href="#" class="social-link facebook" aria-label="Facebook">f</a>
+                <a href="#" class="social-link instagram" aria-label="Instagram">📸</a>
+                <a href="#" class="social-link whatsapp" aria-label="WhatsApp">💬</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="cake.html">Cakes</a>
+                <a href="desserts.html">Desserts</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Email:</strong> info@lavanyasbakery.com</p>
+            <p><strong>Address:</strong> 123 Bakery Lane, Your City</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Lavanya's Home Bakery. All rights reserved.</p>
+    </div>
+</footer>
+
+        <script>
+        const cakeData = JSON.parse(localStorage.getItem('selectedCake') || 'null');
+        const cakeImage = document.getElementById('cakeImage');
+        const cakeName = document.getElementById('cakeName');
+        const cakeRating = document.getElementById('cakeRating');
+        const cakePrice = document.getElementById('cakePrice');
+        const cakeDescription = document.getElementById('cakeDescription');
+        const backBtn = document.getElementById('backBtn');
+        const addToCartBtn = document.getElementById('addToCartBtn');
+
+        if (!cakeData) {
+            cakeName.textContent = 'Cake not found';
+            cakeDescription.textContent = 'Please return to the shop and select a cake again.';
+            cakeImage.src = 'images/hero-cake.jpg';
+            cakeImage.alt = 'Cake not found';
+        } else {
+            cakeImage.src = cakeData.image;
+            cakeImage.alt = cakeData.name;
+            cakeName.textContent = cakeData.name;
+            cakeRating.textContent = cakeData.rating;
+            cakePrice.textContent = cakeData.price;
+            cakeDescription.textContent = cakeData.description;
+        }
+
+        backBtn.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        addToCartBtn.addEventListener('click', () => {
+            let cartCount = parseInt(localStorage.getItem('cartCount') || '0', 10);
+            cartCount += 1;
+            localStorage.setItem('cartCount', cartCount);
+
+            const currentItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+            if (cakeData) {
+                currentItems.push(cakeData.name);
+                localStorage.setItem('cartItems', JSON.stringify(currentItems));
+            }
+
+            alert('🎂 Item added to cart!');
+        });
+    </script>
+</body>
+</html>
