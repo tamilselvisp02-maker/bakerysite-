@@ -150,19 +150,17 @@ const orderButtons = document.querySelectorAll(".order-btn:not([type='submit'])"
 orderButtons.forEach(button => {
     button.addEventListener("click", function (event) {
         event.preventDefault();
-        const originalText = button.textContent.trim();
-        button.textContent = "Opening request form...";
-        button.classList.add("is-loading");
         saveOrderIntent();
 
-        setTimeout(() => {
-            window.location.href = "contact.html";
-        }, 250);
+        const targetId = button.dataset.scrollTarget || "best-sellers";
+        const scrollTarget = document.getElementById(targetId);
 
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.classList.remove("is-loading");
-        }, 1000);
+        if (scrollTarget) {
+            scrollTarget.scrollIntoView({ behavior: "smooth", block: "start" });
+            return;
+        }
+
+        window.location.href = "index.html#best-sellers";
     });
 });
 

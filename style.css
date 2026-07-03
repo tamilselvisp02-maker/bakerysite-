@@ -5,6 +5,10 @@
     font-family:'Poppins',sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     padding-top:120px;
     background:#fff3f7;
@@ -1295,23 +1299,42 @@ body{
     text-align:left; /* ensure detail text is left aligned */
 }
 
-/* align labels (e.g. "Phone:") in a column so values start at same vertical line */
-.contact-info-card .info-block p strong{
-    display:inline-block;
-    width:140px; /* adjust 120-160px if needed */
-    min-width:110px;
+/* Keep contact labels and values close together and aligned on every page */
+.contact-info-card .info-block p,
+.footer-contact p{
+    display:grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 2px 8px;
+    align-items:start;
+    margin: 8px 0;
+    color:#555;
+    line-height:1.7;
+}
+
+.contact-info-card .info-block.opening-hours p {
+    display:block;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    margin: 10px 0 0;
+    line-height: 1.8;
+}
+
+.contact-info-card .info-block p strong,
+.footer-contact p strong{
+    display:block;
+    width:auto;
+    min-width:0;
     font-weight:700;
     color:#333;
-    margin-right:8px;
+    margin:0;
     text-align:left;
 }
 
 @media (max-width: 650px) {
-    .contact-info-card .info-block p strong{
-        display:block;
-        width:auto;
-        margin-right:0;
-        margin-bottom:6px;
+    .contact-info-card .info-block p,
+    .footer-contact p{
+        grid-template-columns: 1fr;
+        gap: 2px;
     }
 }
 
@@ -1466,25 +1489,6 @@ body{
 .footer-contact h4{
     text-align:center; /* heading stays centered */
     margin-bottom:12px;
-}
-
-.footer-contact p strong{
-    display:inline-block;
-    width:140px; /* adjust (120-160px) to fit longest label */
-    min-width:110px;
-    font-weight:700;
-    color:#333;
-    margin-right:8px;
-    text-align:left;
-}
-
-@media (max-width: 800px){
-    .footer-contact p strong{
-        display:block;
-        width:auto;
-        margin-right:0;
-        margin-bottom:6px;
-    }
 }
 
 
